@@ -7,7 +7,7 @@ This small "gist" consists of these components which cannot currently be found i
 
 Currently, you would have to copy the code from the repository to your project to use it, because I don't have enough time to set up a whole project with CI pipeline and so to publish it to npm. If you want to contribute, a pr with a full setup like this is welcomed.
 
-### CtSelect
+## CtSelect
 
 This is a MUI Select component which fully supports [SSR](https://github.com/swordev/suid/issues/268) and the [`<For/>` component](https://github.com/swordev/suid/issues/223). Unfortunately, it is not fully compatible with the original implementation of mui, because this would require to render the selectable items in advance which conflicts with the idea behind solid.js - performance.
 
@@ -40,7 +40,11 @@ export default function () {
 
 ```
 
-> Note: The name comes from an internal Project and has nothing to do with the functionality.
+> Note: The component currently doesn't support autofocus. This is when you open the Menu the initially selected item is the one that is selected. This is quite useful, when working with a keyboard
+
+> Also: I don't know why the MUI implementation includes a native select component (probably because of accessibility), but I had to remove the onChange listener on this native component. I didn't seam to do anything, but I don't know if I destroyed accessibility with that.
+
+The name comes from an internal Project and has nothing to do with the functionality.
 
 
 ## LoadingButton
