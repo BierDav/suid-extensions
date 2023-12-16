@@ -1,0 +1,8 @@
+.collapsing {
+    overflow-y: hidden;
+}
+
+.hidden {
+    display: none;
+    height: 0;
+}
